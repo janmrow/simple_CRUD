@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    @article = Article.new
   end
 
   def create
@@ -17,7 +18,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to @article
     else
-      redirect :back
+      render 'new'
     end
   end
 
