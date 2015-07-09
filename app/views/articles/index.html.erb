@@ -1,0 +1,8 @@
+<h1>Articles on blog:</h1>
+<div>
+  <% @articles.each do |art| %>
+    <h3><%= art.title %></h3>
+    <p><%= art.body %></p>
+    <hr>
+  <% end %>
+</div>
