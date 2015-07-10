@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   resources :articles do
-    :comments
+    resources :comments
   end
 
   root 'pages#home'
