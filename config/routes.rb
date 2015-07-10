@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   get 'pages/about'
   get 'pages/contact'
 
-  resources :articles
+  resources :articles do
+    :comments
+  end
 
   root 'pages#home'
 
